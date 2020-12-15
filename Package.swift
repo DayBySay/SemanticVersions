@@ -6,13 +6,13 @@ import PackageDescription
 let package = Package(
     name: "SemanticVersions",
     dependencies: [
-        .package(name: "SwiftPM", url: "https://github.com/apple/swift-package-manager.git", .exact("0.5.0")),
+        .package(name: "SwiftPM", url: "https://github.com/apple/swift-package-manager.git", .exact("0.6.0")),
     ],
     targets: [
         .target(
             name: "SemanticVersions",
             dependencies: [
-                .product(name: "SPMUtility", package: "SwiftPM")
+                .product(name: "PackageDescription", package: "SwiftPM")
             ]),
         .testTarget(
             name: "SemanticVersionsTests",
